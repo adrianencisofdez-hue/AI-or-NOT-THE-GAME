@@ -1,0 +1,23 @@
+# AI or NOT? THE GAME
+
+## MVP
+- [x] Project created
+- [x] Development environment working
+- [x] Logo selected
+- [ ] Home screen
+- [ ] Game screen
+- [ ] Streak system
+- [ ] Game Over screen
+- [ ] Local Storage
+- [ ] Image database
+- [ ] Responsive design
+- [ ] Deploy to Vercel
+
+## Future
+- [ ] Leaderboard
+- [ ] Username system
+- [ ] Daily Challenge
+- [ ] Statistics
+- [ ] Sound effects
+- [ ] Animations
+- [ ] Admin panel

@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white antialiased;
+  }
+}
+
+@layer utilities {
+  .text-glow-neon {
+    text-shadow:
+      0 0 10px #39ff14,
+      0 0 20px #39ff14,
+      0 0 40px #39ff1466;
+  }
+
+  .cyber-grid {
+    background-image:
+      linear-gradient(#39ff1408 1px, transparent 1px),
+      linear-gradient(90deg, #39ff1408 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
