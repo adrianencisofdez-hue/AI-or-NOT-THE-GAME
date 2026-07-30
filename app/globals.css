@@ -8,6 +8,28 @@
   }
 }
 
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(53, 201, 255, 0.95), 0 0 22px rgba(53, 201, 255, 0.65), 0 0 38px rgba(53, 201, 255, 0.35);
+  }
+  20%, 24%, 55% {
+    opacity: 0.96;
+    text-shadow: 0 0 4px rgba(53, 201, 255, 0.8), 0 0 10px rgba(53, 201, 255, 0.3);
+  }
+}
+
+@keyframes drift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate3d(0, -7px, 0);
+    opacity: 1;
+  }
+}
+
 @layer utilities {
   .text-glow-neon {
     text-shadow:
@@ -21,5 +43,14 @@
       linear-gradient(#39ff1408 1px, transparent 1px),
       linear-gradient(90deg, #39ff1408 1px, transparent 1px);
     background-size: 32px 32px;
+    opacity: 0.06;
+  }
+
+  .flicker {
+    animation: flicker 3.2s ease-in-out infinite;
+  }
+
+  .drift {
+    animation: drift 5.2s ease-in-out infinite;
   }
 }
