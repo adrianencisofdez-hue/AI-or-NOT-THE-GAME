@@ -4,26 +4,72 @@ import Image from "next/image";
 import { Bot, Camera } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
+type Guess = "ai" | "real";
+type Difficulty = "easy" | "hard";
+type ImageEntry = { id: number; src: string; difficulty: Difficulty; label: Guess };
+
+const IMAGE_POOL = Array.from({ length: 24 }, (_, index) => ({
+  id: index + 1,
+  src: "/images/placeholder.png",
+  difficulty: index < 3 ? "easy" : index % 2 === 0 ? "easy" : "hard",
+}));
+
+function getRandomGuess(): Guess {
+  return Math.random() < 0.5 ? "ai" : "real";
+}
+
 export default function GamePage() {
-  const [score, setScore] = useState(0);
-  const [bestScore, setBestScore] = useState(0);
-  const [imageIndex, setImageIndex] = useState(1);
-  const [selected, setSelected] = useState<"ai" | "real" | null>(null);
+  const [streak, setStreak] = useState(0);
+  const [bestStreak, setBestStreak] = useState(0);
+  const [round, setRound] = useState(0);
+  const [currentImage, setCurrentImage] = useState<ImageEntry | null>(null);
+  const [usedImageIds, setUsedImageIds] = useState<number[]>([]);
+  const [selected, setSelected] = useState<Guess | null>(null);
+  const [gameOver, setGameOver] = useState(false);
 
   useEffect(() => {
-    const savedBest = window.localStorage.getItem("ai-or-not-best-score");
+    const savedBest = window.localStorage.getItem("ai-or-not-best-streak");
     if (savedBest) {
-      setBestScore(Number(savedBest));
+      setBestStreak(Number(savedBest));
     }
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem("ai-or-not-best-score", String(bestScore));
-  }, [bestScore]);
+    window.localStorage.setItem("ai-or-not-best-streak", String(bestStreak));
+  }, [bestStreak]);
 
-  const totalImages = 10;
+  const pickNextImage = (nextRound: number, usedIds: number[]) => {
+    const eligible = IMAGE_POOL.filter(
+      (image) => !usedIds.includes(image.id) && (nextRound < 3 ? image.difficulty === "easy" : true),
+    );
+
+    const candidates = eligible.length > 0 ? eligible : IMAGE_POOL.filter((image) => !usedIds.includes(image.id));
+    const pool = candidates.length > 0 ? candidates : IMAGE_POOL;
+    const chosen = pool[Math.floor(Math.random() * pool.length)];
+
+    return {
+      ...chosen,
+      label: getRandomGuess(),
+    };
+  };
+
+  const startNewRun = () => {
+    setStreak(0);
+    setRound(0);
+    setSelected(null);
+    setGameOver(false);
+    setUsedImageIds([]);
+    setCurrentImage(pickNextImage(0, []));
+  };
+
+  useEffect(() => {
+    startNewRun();
+  }, []);
 
   const statusLabel = useMemo(() => {
+    if (gameOver) {
+      return "GAME OVER";
+    }
     if (selected === "ai") {
       return "AI GENERATED";
     }
@@ -31,14 +77,43 @@ export default function GamePage() {
       return "REAL PHOTO";
     }
     return "CHOOSE YOUR CALL";
-  }, [selected]);
+  }, [selected, gameOver]);
 
-  const handleGuess = (guess: "ai" | "real") => {
+  const handleGuess = (guess: Guess) => {
+    if (gameOver) {
+      startNewRun();
+      return;
+    }
+
+    if (!currentImage) {
+      return;
+    }
+
+    if (guess !== currentImage.label) {
+      setSelected(guess);
+      setGameOver(true);
+      return;
+    }
+
+    const nextStreak = streak + 1;
+    const nextRound = round + 1;
+    const nextUsedImageIds = [...usedImageIds, currentImage.id];
+
+    setStreak(nextStreak);
+    setBestStreak((current) => Math.max(current, nextStreak));
     setSelected(guess);
-    const nextScore = score + 1;
-    setScore(nextScore);
-    setBestScore((current) => Math.max(current, nextScore));
-    setImageIndex((current) => (current % totalImages) + 1);
+    setUsedImageIds(nextUsedImageIds);
+    setRound(nextRound);
+    setCurrentImage(pickNextImage(nextRound, nextUsedImageIds));
+  };
+
+  const handleButtonClick = (guess: Guess) => {
+    if (gameOver) {
+      startNewRun();
+      return;
+    }
+
+    handleGuess(guess);
   };
 
   return (
@@ -64,27 +139,25 @@ export default function GamePage() {
           </div>
 
           <div className="flex items-center gap-2 rounded-full border border-[#39FF14]/40 bg-black/60 px-3 py-1.5">
-            <span className="font-pixel text-[10px] uppercase tracking-[0.24em] text-[#39FF14]">Image</span>
-            <span className="font-pixel text-[10px] uppercase tracking-[0.24em] text-white">{imageIndex}</span>
-            <span className="font-pixel text-[10px] uppercase tracking-[0.24em] text-white/70">/</span>
-            <span className="font-pixel text-[10px] uppercase tracking-[0.24em] text-white/70">{totalImages}</span>
+            <span className="font-pixel text-[10px] uppercase tracking-[0.24em] text-[#39FF14]">Streak</span>
+            <span className="font-pixel text-[10px] uppercase tracking-[0.24em] text-white">{streak}</span>
           </div>
 
           <div className="flex items-center gap-2 rounded-full border border-[#39FF14]/40 bg-black/60 px-3 py-1.5">
-            <span className="font-pixel text-[10px] uppercase tracking-[0.24em] text-[#39FF14]">Score</span>
-            <span className="font-pixel text-[10px] uppercase tracking-[0.24em] text-white">{score}</span>
+            <span className="font-pixel text-[10px] uppercase tracking-[0.24em] text-[#39FF14]">Best</span>
+            <span className="font-pixel text-[10px] uppercase tracking-[0.24em] text-white">{bestStreak}</span>
           </div>
         </div>
 
         <div className="max-w-2xl text-center">
           <p className="font-pixel text-[11px] uppercase tracking-[0.24em] text-white sm:text-[12px]">
-            Guess if the image is AI-generated or real.
+            {statusLabel}
           </p>
           <p className="mt-2 font-pixel text-[11px] uppercase tracking-[0.24em] text-white/70 sm:text-[12px]">
-            10 images.
+            Current streak: {streak}
           </p>
           <p className="mt-2 font-pixel text-[11px] uppercase tracking-[0.24em] text-[#39FF14] sm:text-[12px]">
-            Good luck.
+            {gameOver ? "TRY AGAIN" : `Best streak: ${bestStreak}`}
           </p>
         </div>
 
@@ -96,7 +169,7 @@ export default function GamePage() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(57,255,20,0.16),transparent_55%)]" />
                 <div className="relative z-10 flex h-full w-full items-center justify-center overflow-hidden rounded-[18px]">
                   <Image
-                    src="/images/placeholder.png"
+                    src={currentImage?.src ?? "/images/placeholder.png"}
                     alt="Placeholder image"
                     fill
                     className="object-contain"
@@ -111,20 +184,20 @@ export default function GamePage() {
         <div className="flex w-full max-w-3xl flex-col gap-3 sm:flex-row">
           <button
             type="button"
-            onClick={() => handleGuess("ai")}
+            onClick={() => handleButtonClick("ai")}
             className="group flex flex-1 items-center justify-center gap-3 rounded-[22px] border-[4px] border-[#ff2ea6]/80 bg-[#12020f] px-5 py-4 text-[18px] font-bold uppercase tracking-[0.18em] text-[#ff2ea6] shadow-[0_0_14px_rgba(255,46,166,0.22)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:shadow-[0_0_22px_rgba(255,46,166,0.35)] active:scale-[0.98] font-pixel"
           >
             <Bot className="h-5 w-5" />
-            <span>AI GENERATED</span>
+            <span>{gameOver ? "TRY AGAIN" : "AI GENERATED"}</span>
           </button>
 
           <button
             type="button"
-            onClick={() => handleGuess("real")}
+            onClick={() => handleButtonClick("real")}
             className="group flex flex-1 items-center justify-center gap-3 rounded-[22px] border-[4px] border-[#35c9ff]/80 bg-[#07131b] px-5 py-4 text-[18px] font-bold uppercase tracking-[0.18em] text-[#35c9ff] shadow-[0_0_14px_rgba(53,201,255,0.22)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:shadow-[0_0_22px_rgba(53,201,255,0.35)] active:scale-[0.98] font-pixel"
           >
             <Camera className="h-5 w-5" />
-            <span>REAL PHOTO</span>
+            <span>{gameOver ? "TRY AGAIN" : "REAL PHOTO"}</span>
           </button>
         </div>
       </section>
