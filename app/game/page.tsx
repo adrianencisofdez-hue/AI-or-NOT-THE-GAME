@@ -182,23 +182,35 @@ export default function GamePage() {
         </div>
 
         <div className="flex w-full max-w-3xl flex-col gap-3 sm:flex-row">
-          <button
-            type="button"
-            onClick={() => handleButtonClick("ai")}
-            className="group flex flex-1 items-center justify-center gap-3 rounded-[22px] border-[4px] border-[#ff2ea6]/80 bg-[#12020f] px-5 py-4 text-[18px] font-bold uppercase tracking-[0.18em] text-[#ff2ea6] shadow-[0_0_14px_rgba(255,46,166,0.22)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:shadow-[0_0_22px_rgba(255,46,166,0.35)] active:scale-[0.98] font-pixel"
-          >
-            <Bot className="h-5 w-5" />
-            <span>{gameOver ? "TRY AGAIN" : "AI GENERATED"}</span>
-          </button>
+          {!gameOver ? (
+            <>
+              <button
+                type="button"
+                onClick={() => handleButtonClick("ai")}
+                className="group flex flex-1 items-center justify-center gap-3 rounded-[22px] border-[4px] border-[#ff2ea6]/80 bg-[#12020f] px-5 py-4 text-[18px] font-bold uppercase tracking-[0.18em] text-[#ff2ea6] shadow-[0_0_14px_rgba(255,46,166,0.22)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:shadow-[0_0_22px_rgba(255,46,166,0.35)] active:scale-[0.98] font-pixel"
+              >
+                <Bot className="h-5 w-5" />
+                <span>AI GENERATED</span>
+              </button>
 
-          <button
-            type="button"
-            onClick={() => handleButtonClick("real")}
-            className="group flex flex-1 items-center justify-center gap-3 rounded-[22px] border-[4px] border-[#35c9ff]/80 bg-[#07131b] px-5 py-4 text-[18px] font-bold uppercase tracking-[0.18em] text-[#35c9ff] shadow-[0_0_14px_rgba(53,201,255,0.22)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:shadow-[0_0_22px_rgba(53,201,255,0.35)] active:scale-[0.98] font-pixel"
-          >
-            <Camera className="h-5 w-5" />
-            <span>{gameOver ? "TRY AGAIN" : "REAL PHOTO"}</span>
-          </button>
+              <button
+                type="button"
+                onClick={() => handleButtonClick("real")}
+                className="group flex flex-1 items-center justify-center gap-3 rounded-[22px] border-[4px] border-[#35c9ff]/80 bg-[#07131b] px-5 py-4 text-[18px] font-bold uppercase tracking-[0.18em] text-[#35c9ff] shadow-[0_0_14px_rgba(53,201,255,0.22)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:shadow-[0_0_22px_rgba(53,201,255,0.35)] active:scale-[0.98] font-pixel"
+              >
+                <Camera className="h-5 w-5" />
+                <span>REAL PHOTO</span>
+              </button>
+            </>
+          ) : (
+            <button
+              type="button"
+              onClick={() => handleButtonClick("ai")}
+              className="group mx-auto flex w-full max-w-[320px] items-center justify-center rounded-[22px] border-[4px] border-[#39FF14]/80 bg-[#0b160b] px-5 py-4 text-[18px] font-bold uppercase tracking-[0.18em] text-[#39FF14] shadow-[0_0_14px_rgba(57,255,20,0.22)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:shadow-[0_0_22px_rgba(57,255,20,0.35)] active:scale-[0.98] font-pixel"
+            >
+              <span>TRY AGAIN?</span>
+            </button>
+          )}
         </div>
       </section>
     </main>
