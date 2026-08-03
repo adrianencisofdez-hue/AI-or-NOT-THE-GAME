@@ -1,8 +1,9 @@
 [
   {
-    "id": "ai_easy_001",
-    "type": "ai",
+    "id": "real_easy_001",
+    "filename": "real_easy_001.webp",
+    "type": "real",
     "difficulty": "easy",
-    "src": "/assets/images/ai/easy/ai_easy_001.webp"
+    "category": "people"
   }
 ]
