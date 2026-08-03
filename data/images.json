@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "id": "ai_easy_001",
+    "type": "ai",
+    "difficulty": "easy",
+    "src": "/assets/images/ai/easy/ai_easy_001.webp"
+  }
+]
