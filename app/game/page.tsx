@@ -3,27 +3,24 @@
 import Image from "next/image";
 import { Bot, Camera } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import imageData from "../../data/images.json";
 
 type Guess = "ai" | "real";
-type Difficulty = "easy" | "hard";
-type ImageEntry = { id: number; src: string; difficulty: Difficulty; label: Guess };
+type ImageEntry = { id: string; src: string; type: Guess; label: Guess };
 
-const IMAGE_POOL = Array.from({ length: 24 }, (_, index) => ({
-  id: index + 1,
-  src: "/images/placeholder.png",
-  difficulty: index < 3 ? "easy" : index % 2 === 0 ? "easy" : "hard",
+const IMAGE_POOL: ImageEntry[] = imageData.map((image) => ({
+  id: image.id,
+  src: `/images/${image.type}/${image.filename}`,
+  type: image.type as Guess,
+  label: image.type as Guess,
 }));
-
-function getRandomGuess(): Guess {
-  return Math.random() < 0.5 ? "ai" : "real";
-}
 
 export default function GamePage() {
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
   const [round, setRound] = useState(0);
   const [currentImage, setCurrentImage] = useState<ImageEntry | null>(null);
-  const [usedImageIds, setUsedImageIds] = useState<number[]>([]);
+  const [usedImageIds, setUsedImageIds] = useState<string[]>([]);
   const [selected, setSelected] = useState<Guess | null>(null);
   const [gameOver, setGameOver] = useState(false);
 
@@ -38,19 +35,12 @@ export default function GamePage() {
     window.localStorage.setItem("ai-or-not-best-streak", String(bestStreak));
   }, [bestStreak]);
 
-  const pickNextImage = (nextRound: number, usedIds: number[]) => {
-    const eligible = IMAGE_POOL.filter(
-      (image) => !usedIds.includes(image.id) && (nextRound < 3 ? image.difficulty === "easy" : true),
-    );
-
-    const candidates = eligible.length > 0 ? eligible : IMAGE_POOL.filter((image) => !usedIds.includes(image.id));
-    const pool = candidates.length > 0 ? candidates : IMAGE_POOL;
+  const pickNextImage = (nextRound: number, usedIds: string[]) => {
+    const eligible = IMAGE_POOL.filter((image) => !usedIds.includes(image.id));
+    const pool = eligible.length > 0 ? eligible : IMAGE_POOL;
     const chosen = pool[Math.floor(Math.random() * pool.length)];
 
-    return {
-      ...chosen,
-      label: getRandomGuess(),
-    };
+    return chosen;
   };
 
   const startNewRun = () => {

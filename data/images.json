@@ -1,9 +1,407 @@
 [
   {
-    "id": "real_easy_001",
-    "filename": "real_easy_001.webp",
-    "type": "real",
-    "difficulty": "easy",
-    "category": "people"
+    "id": "ai_Pedro-Sanchez-IA-Corrupcion.jpg",
+    "filename": "Pedro-Sanchez-IA-Corrupcion.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Amigos_Improbables_Conectan-1990340-small.jpg",
+    "filename": "StockCake-Amigos_Improbables_Conectan-1990340-small.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Belleza_de_pecas_doradas-4884533-medium.jpg",
+    "filename": "StockCake-Belleza_de_pecas_doradas-4884533-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Día_soleado_de_playa-1391464-medium.jpg",
+    "filename": "StockCake-Día_soleado_de_playa-1391464-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Elegancia_de_Terciopelo_Carmesí-4864927-medium.jpg",
+    "filename": "StockCake-Elegancia_de_Terciopelo_Carmesí-4864927-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Energía_de_cóctel_urbano-4884301-medium.jpg",
+    "filename": "StockCake-Energía_de_cóctel_urbano-4884301-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Escena_de_Picnic_en_la_Playa-989003-medium.jpg",
+    "filename": "StockCake-Escena_de_Picnic_en_la_Playa-989003-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Explosión_de_rabia_con_la_impresora-4868048-medium.jpg",
+    "filename": "StockCake-Explosión_de_rabia_con_la_impresora-4868048-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Gato_observa_relámpagos-3264052-medium.jpg",
+    "filename": "StockCake-Gato_observa_relámpagos-3264052-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Guardián_urbano_cósmico-2901624-medium.jpg",
+    "filename": "StockCake-Guardián_urbano_cósmico-2901624-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Image-4864814-medium.jpg",
+    "filename": "StockCake-Image-4864814-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Image-4884573-medium.jpg",
+    "filename": "StockCake-Image-4884573-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Image-4884576-medium.jpg",
+    "filename": "StockCake-Image-4884576-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Majestuoso_Retrato_de_Gato_Atigrado-1827630-medium.jpg",
+    "filename": "StockCake-Majestuoso_Retrato_de_Gato_Atigrado-1827630-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Mujer_vistiendo_peto-4868462-medium.jpg",
+    "filename": "StockCake-Mujer_vistiendo_peto-4868462-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Nostalgia_de_cafetería_retro-4865098-medium.jpg",
+    "filename": "StockCake-Nostalgia_de_cafetería_retro-4865098-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Partido_de_vóley_playa-1294606-medium.jpg",
+    "filename": "StockCake-Partido_de_vóley_playa-1294606-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Recuerdos_de_Día_de_Playa-3955739-medium.jpg",
+    "filename": "StockCake-Recuerdos_de_Día_de_Playa-3955739-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Recuerdos_familiares_en_la_playa-3953435-medium.jpg",
+    "filename": "StockCake-Recuerdos_familiares_en_la_playa-3953435-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Relojería_Oculta_Revelada-4884406-medium.jpg",
+    "filename": "StockCake-Relojería_Oculta_Revelada-4884406-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Retrato_de_Panadero_Renacentista-4866976-medium.jpg",
+    "filename": "StockCake-Retrato_de_Panadero_Renacentista-4866976-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Soledad_urbana_vespertina-4864416-medium.jpg",
+    "filename": "StockCake-Soledad_urbana_vespertina-4864416-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_StockCake-Vuelo_en_la_selva_esmeralda-4198682-medium.jpg",
+    "filename": "StockCake-Vuelo_en_la_selva_esmeralda-4198682-medium.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_WhatsApp Image 2026-03-24 at 23.16.49 (2).webp",
+    "filename": "WhatsApp Image 2026-03-24 at 23.16.49 (2).webp",
+    "type": "ai"
+  },
+  {
+    "id": "ai_WhatsApp Image 2026-03-24 at 23.16.49 (4).webp",
+    "filename": "WhatsApp Image 2026-03-24 at 23.16.49 (4).webp",
+    "type": "ai"
+  },
+  {
+    "id": "ai_WhatsApp Image 2026-03-24 at 23.16.50 (1).webp",
+    "filename": "WhatsApp Image 2026-03-24 at 23.16.50 (1).webp",
+    "type": "ai"
+  },
+  {
+    "id": "ai_este-perro-que-pinta-un-cuadro-es-facilmente-identificable-como-una-creacion-con-ia-foto-creada-con-meta-ai-FEAOWJW6EZC2FM75AXFVTXIQCA.avif",
+    "filename": "este-perro-que-pinta-un-cuadro-es-facilmente-identificable-como-una-creacion-con-ia-foto-creada-con-meta-ai-FEAOWJW6EZC2FM75AXFVTXIQCA.avif",
+    "type": "ai"
+  },
+  {
+    "id": "ai_f.elconfidencial.com_original_4b2_9b5_aa7_4b29b5aa750054b2f6b3a31fd38c1147.jpg",
+    "filename": "f.elconfidencial.com_original_4b2_9b5_aa7_4b29b5aa750054b2f6b3a31fd38c1147.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_f.elconfidencial.com_original_c5b_61a_521_c5b61a52174a345f2f749c2df19eafb3.jpg",
+    "filename": "f.elconfidencial.com_original_c5b_61a_521_c5b61a52174a345f2f749c2df19eafb3.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_f.elconfidencial.com_original_dc9_292_9c7_dc92929c7698745218440dd08c2c15a2.jpg",
+    "filename": "f.elconfidencial.com_original_dc9_292_9c7_dc92929c7698745218440dd08c2c15a2.jpg",
+    "type": "ai"
+  },
+  {
+    "id": "ai_funny-ai-image-prompt-5.webp",
+    "filename": "funny-ai-image-prompt-5.webp",
+    "type": "ai"
+  },
+  {
+    "id": "ai_funny_ai_image_2.webp",
+    "filename": "funny_ai_image_2.webp",
+    "type": "ai"
+  },
+  {
+    "id": "ai_imagen-sacada-video-publicado-llamado-isla-corrupciones_104.avif",
+    "filename": "imagen-sacada-video-publicado-llamado-isla-corrupciones_104.avif",
+    "type": "ai"
+  },
+  {
+    "id": "ai_pequeños-gatitos-en-situaciones-graciosas-fotorrealista-generado-por-ia-divertidas-haciendo-travesuras-casa-foto-ultra-realista-389353872.webp",
+    "filename": "pequeños-gatitos-en-situaciones-graciosas-fotorrealista-generado-por-ia-divertidas-haciendo-travesuras-casa-foto-ultra-realista-389353872.webp",
+    "type": "ai"
+  },
+  {
+    "id": "ai_pope-wearing-balenciaga-jacket-viral-ai-images.jpeg",
+    "filename": "pope-wearing-balenciaga-jacket-viral-ai-images.jpeg",
+    "type": "ai"
+  },
+  {
+    "id": "real_pexels-adrien-olichon-1257089-12067501.jpg",
+    "filename": "pexels-adrien-olichon-1257089-12067501.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-ana-kenk-2159501753-36468248.jpg",
+    "filename": "pexels-ana-kenk-2159501753-36468248.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-basiciggy-9567594.jpg",
+    "filename": "pexels-basiciggy-9567594.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-buselliyy-31711944.jpg",
+    "filename": "pexels-buselliyy-31711944.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-bylukemiller-24589268.jpg",
+    "filename": "pexels-bylukemiller-24589268.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-dagmara-dombrovska-22732579-19135397.jpg",
+    "filename": "pexels-dagmara-dombrovska-22732579-19135397.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-davegarcia-35689350.jpg",
+    "filename": "pexels-davegarcia-35689350.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-eberhardgross-28701196.jpg",
+    "filename": "pexels-eberhardgross-28701196.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-ekam-juneja-61080223-11273144.jpg",
+    "filename": "pexels-ekam-juneja-61080223-11273144.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-fatih-turan-63325184-16880599.jpg",
+    "filename": "pexels-fatih-turan-63325184-16880599.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-ffc-aarman-22995634-27860686.jpg",
+    "filename": "pexels-ffc-aarman-22995634-27860686.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-gabrieluizramos-16476075.jpg",
+    "filename": "pexels-gabrieluizramos-16476075.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-iamikeee-2447786.jpg",
+    "filename": "pexels-iamikeee-2447786.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-ikbalphoto-8946006.jpg",
+    "filename": "pexels-ikbalphoto-8946006.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-image-hunter-281453274-36687007.jpg",
+    "filename": "pexels-image-hunter-281453274-36687007.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-ivanhdz-38761801.jpg",
+    "filename": "pexels-ivanhdz-38761801.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-joolsmagools-28710026.jpg",
+    "filename": "pexels-joolsmagools-28710026.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-kayla-dahl-maclean-2148236042-30239303.jpg",
+    "filename": "pexels-kayla-dahl-maclean-2148236042-30239303.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-kubrarkan-13013307.jpg",
+    "filename": "pexels-kubrarkan-13013307.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-lureofadventure-31029716.jpg",
+    "filename": "pexels-lureofadventure-31029716.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-magda-ehlers-pexels-31139336.jpg",
+    "filename": "pexels-magda-ehlers-pexels-31139336.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-manzoni-studios-59597719-8531053.jpg",
+    "filename": "pexels-manzoni-studios-59597719-8531053.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-mike-jones-8805439.jpg",
+    "filename": "pexels-mike-jones-8805439.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-muhammed-ali-439672930-34464846.jpg",
+    "filename": "pexels-muhammed-ali-439672930-34464846.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-natalierodrigues-4226349.jpg",
+    "filename": "pexels-natalierodrigues-4226349.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-neslihan-ercan-58134101-8093682.jpg",
+    "filename": "pexels-neslihan-ercan-58134101-8093682.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-nomino-28357674.jpg",
+    "filename": "pexels-nomino-28357674.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-oandremoura-31427737.jpg",
+    "filename": "pexels-oandremoura-31427737.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-omorneau-765162.jpg",
+    "filename": "pexels-omorneau-765162.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-peter-steiner-1973-560957992-16859174.jpg",
+    "filename": "pexels-peter-steiner-1973-560957992-16859174.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-petra-nesti-1766376-38755469.jpg",
+    "filename": "pexels-petra-nesti-1766376-38755469.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-pixabay-459489.jpg",
+    "filename": "pexels-pixabay-459489.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-rahimegul-29632178.jpg",
+    "filename": "pexels-rahimegul-29632178.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-rishu-bhosale-40372778-30074125.jpg",
+    "filename": "pexels-rishu-bhosale-40372778-30074125.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-rom-fotgrafo-9396493.jpg",
+    "filename": "pexels-rom-fotgrafo-9396493.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-saila-holidays-zanzibar-1351717875-25706808.jpg",
+    "filename": "pexels-saila-holidays-zanzibar-1351717875-25706808.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-serenakoi-13515418.jpg",
+    "filename": "pexels-serenakoi-13515418.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-shubh-gupta-2152097048-32080246.jpg",
+    "filename": "pexels-shubh-gupta-2152097048-32080246.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-soc-nang-d-ng-2150345854-32582469.jpg",
+    "filename": "pexels-soc-nang-d-ng-2150345854-32582469.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-tamara-g-p-2157458231-38322889.jpg",
+    "filename": "pexels-tamara-g-p-2157458231-38322889.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-the_-dudors-86001420-34735489.jpg",
+    "filename": "pexels-the_-dudors-86001420-34735489.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-thepaintedsquare-4199662.jpg",
+    "filename": "pexels-thepaintedsquare-4199662.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-ttkasli-7921165.jpg",
+    "filename": "pexels-ttkasli-7921165.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-umudicreative-22748765.jpg",
+    "filename": "pexels-umudicreative-22748765.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-vitalina-parpalak-464777198-16019884.jpg",
+    "filename": "pexels-vitalina-parpalak-464777198-16019884.jpg",
+    "type": "real"
+  },
+  {
+    "id": "real_pexels-vuk-burgic-701657617-18125203.jpg",
+    "filename": "pexels-vuk-burgic-701657617-18125203.jpg",
+    "type": "real"
   }
 ]
