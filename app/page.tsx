@@ -41,6 +41,10 @@ export default function Home() {
           <span className="text-[#ffb300]">A</span>
           <span className="text-[#b45cff]">Y</span>
         </Link>
+
+        <p className="absolute left-1/2 top-full mt-[30px] -translate-x-1/2 whitespace-nowrap font-pixel text-[11px] font-normal not-italic normal-case text-[#9CA3AF]">
+          by: <a href="https://www.instagram.com/adriiiief/" target="_blank" rel="noopener noreferrer" className="no-underline">@adriiiief</a>
+        </p>
       </div>
     </main>
   );
